@@ -1,5 +1,5 @@
 # Applied Data Science for Security Professionals
-### BlackHat 2018 Trainings (August 4th-7th, 2018) presented by GTK Cyber
+### BlackHat 2023 Trainings presented by GTK Cyber
 
 Notebooks/Solutions to exercises:
 
