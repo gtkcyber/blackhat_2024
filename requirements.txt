@@ -1,0 +1,7 @@
+pandas
+numpy
+matplotlib
+xgboost
+adversarial-robustness-toolbox
+openai
+pandasai

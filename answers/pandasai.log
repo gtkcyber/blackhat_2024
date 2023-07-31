@@ -1,0 +1,704 @@
+2023-07-30 12:59:29 [INFO] Running PandasAI with openai LLM...
+2023-07-30 12:59:29 [INFO] Prompt ID: 652ad05c-a5b1-4aa3-b997-9a8aa5f5addc
+2023-07-30 12:59:30 [INFO] 
+                        Code generated:
+                        ```
+                        df['date'].value_counts().head()
+                        ```
+                    
+2023-07-30 12:59:30 [INFO] 
+Code running:
+```
+df['date'].value_counts().head()
+```
+2023-07-30 12:59:30 [INFO] Answer: date
+2016-07-06    59
+2016-06-03    58
+2016-08-16    58
+2016-06-06    58
+2016-06-07    58
+Name: count, dtype: int64
+2023-07-30 12:59:30 [INFO] Executed in: 1.446352243423462s
+2023-07-30 13:01:01 [INFO] Running PandasAI with openai LLM...
+2023-07-30 13:01:01 [INFO] Prompt ID: 99beb647-f46b-4865-9a3e-0b7b272eba25
+2023-07-30 13:01:07 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by date and botfam, and calculate the sum of hosts
+grouped_df = df.groupby(['date', 'botfam']).sum().reset_index()
+
+# Pivot the data to have botfam as columns and date as index
+pivot_df = grouped_df.pivot(index='date', columns='botfam', values='hosts')
+
+# Plot the line chart
+pivot_df.plot(kind='line', figsize=(10, 6))
+plt.xlabel('Date')
+plt.ylabel('Infections')
+plt.title('Infections per Day by Botfam')
+plt.legend(title='Botfam')
+plt.show()
+                        ```
+                    
+2023-07-30 13:01:07 [INFO] 
+Code running:
+```
+grouped_df = df.groupby(['date', 'botfam']).sum().reset_index()
+pivot_df = grouped_df.pivot(index='date', columns='botfam', values='hosts')
+pivot_df.plot(kind='line', figsize=(10, 6))
+plt.xlabel('Date')
+plt.ylabel('Infections')
+plt.title('Infections per Day by Botfam')
+plt.legend(title='Botfam')
+plt.show()
+plt.close('all')
+```
+2023-07-30 13:01:08 [INFO] Answer: None
+2023-07-30 13:01:08 [INFO] Executed in: 6.826062917709351s
+2023-07-30 13:23:24 [INFO] Running PandasAI with openai LLM...
+2023-07-30 13:23:24 [INFO] Prompt ID: 190866bd-21fd-4526-b3ec-6ca9a47c990d
+2023-07-30 13:23:27 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+
+# Read the dataframe
+df = pd.read_csv('data.csv')
+
+# Group the data by industry and botfam, and calculate the sum of infections
+grouped_df = df.groupby(['industry', 'botfam']).sum()['hosts']
+
+# Find the botfam with the most infections in each industry
+most_infections = grouped_df.groupby('industry').idxmax().apply(lambda x: x[1])
+
+# Print the result
+print(most_infections)
+                        ```
+                    
+2023-07-30 13:23:27 [INFO] 
+Code running:
+```
+grouped_df = df.groupby(['industry', 'botfam']).sum()['hosts']
+most_infections = grouped_df.groupby('industry').idxmax().apply(lambda x: x[1])
+print(most_infections)
+```
+2023-07-30 13:23:42 [INFO] Answer: 
+2023-07-30 13:23:42 [INFO] Executed in: 18.390082836151123s
+2023-07-30 17:43:24 [INFO] Running PandasAI with openai LLM...
+2023-07-30 17:43:24 [INFO] Prompt ID: 01d5cb8e-154b-4d0e-a968-579c5cb9e10a
+2023-07-30 17:43:24 [INFO] Using cached response
+2023-07-30 17:43:24 [INFO] 
+Code running:
+```
+grouped_df = df.groupby(['industry', 'botfam']).sum()['hosts']
+most_infections = grouped_df.groupby('industry').idxmax().apply(lambda x: x[1])
+print(most_infections)
+```
+2023-07-30 17:43:34 [INFO] Answer: 
+2023-07-30 17:43:34 [INFO] Executed in: 10.440953016281128s
+2023-07-30 17:43:46 [INFO] Running PandasAI with openai LLM...
+2023-07-30 17:43:46 [INFO] Prompt ID: 241b6225-3631-4db5-8eb0-cac616e9c706
+2023-07-30 17:43:48 [INFO] 
+                        Code generated:
+                        ```
+                        most_infections = df.groupby('botfam')['hosts'].sum().sort_values(ascending=False).head(5)
+most_infections
+                        ```
+                    
+2023-07-30 17:43:48 [INFO] 
+Code running:
+```
+most_infections = df.groupby('botfam')['hosts'].sum().sort_values(ascending
+    =False).head(5)
+most_infections
+```
+2023-07-30 17:43:48 [INFO] Answer: botfam
+ConfickerAB    321373
+Ramnit          78753
+PushDo          62485
+Sality          56600
+Bedep           52049
+Name: hosts, dtype: int64
+2023-07-30 17:43:48 [INFO] Executed in: 1.2718913555145264s
+2023-07-30 21:24:58 [INFO] Running PandasAI with openai LLM...
+2023-07-30 21:24:58 [INFO] Prompt ID: cbe6f675-1874-46e1-a7a7-a24d371bcb65
+2023-07-30 21:25:02 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+
+# Copy the dataframe to a new variable named df_features
+df_features = df.copy()
+
+# Feature generation
+df_features['domain_length'] = df_features['domain'].apply(len)
+df_features['num_digits'] = df_features['domain'].apply(lambda x: sum(c.isdigit() for c in x))
+df_features['num_special_chars'] = df_features['domain'].apply(lambda x: sum(not c.isalnum() for c in x))
+
+# Return df_features
+df_features
+                        ```
+                    
+2023-07-30 21:25:02 [INFO] 
+Code running:
+```
+df_features = df.copy()
+df_features['domain_length'] = df_features['domain'].apply(len)
+df_features['num_digits'] = df_features['domain'].apply(lambda x: sum(c.
+    isdigit() for c in x))
+df_features['num_special_chars'] = df_features['domain'].apply(lambda x:
+    sum(not c.isalnum() for c in x))
+df_features
+```
+2023-07-30 21:25:02 [INFO] Answer:       isDGA                      domain  ... num_digits num_special_chars
+0       dga               tyopcrkqgxcfm  ...          0                 0
+1       dga  72j5rn1l9mzleo6203v1ogenfl  ...         10                 0
+2       dga                    thenrest  ...          0                 0
+3       dga  15ihbm71utcnfa8dk1mmgoobl9  ...          7                 0
+4       dga    x1d6ou7e7kofk60ayhq74x7e  ...          9                 0
+...     ...                         ...  ...        ...               ...
+1995  legit                        88ha  ...          2                 0
+1996  legit                      grooby  ...          0                 0
+1997  legit                       51zzl  ...          2                 0
+1998  legit             index-education  ...          0                 1
+1999  legit                    fastpics  ...          0                 0
+
+[2000 rows x 7 columns]
+2023-07-30 21:25:02 [INFO] Executed in: 3.845475912094116s
+2023-07-30 21:32:08 [INFO] Running PandasAI with openai LLM...
+2023-07-30 21:32:08 [INFO] Prompt ID: 1244d3cc-2091-460d-a461-48bb3855335c
+2023-07-30 21:32:11 [INFO] 
+                        Code generated:
+                        ```
+                        df_government = df[df['industry'] == 'Government/Politics']
+most_affected_botfam = df_government.groupby('botfam')['hosts'].sum().idxmax()
+most_affected_botfam
+                        ```
+                    
+2023-07-30 21:32:11 [INFO] 
+Code running:
+```
+df_government = df[df['industry'] == 'Government/Politics']
+most_affected_botfam = df_government.groupby('botfam')['hosts'].sum().idxmax()
+most_affected_botfam
+```
+2023-07-30 21:32:11 [INFO] Answer: ConfickerAB
+2023-07-30 21:32:11 [INFO] Executed in: 2.617642879486084s
+2023-07-30 21:32:20 [INFO] Running PandasAI with openai LLM...
+2023-07-30 21:32:20 [INFO] Prompt ID: 8b184a7b-54b3-473f-9a96-207d3ad05a53
+2023-07-30 21:32:22 [INFO] 
+                        Code generated:
+                        ```
+                        df_government = df[df['industry'] == 'Government/Politics']
+top_5_botfam = df_government.groupby('botfam')['hosts'].sum().nlargest(5)
+top_5_botfam
+                        ```
+                    
+2023-07-30 21:32:22 [INFO] 
+Code running:
+```
+df_government = df[df['industry'] == 'Government/Politics']
+top_5_botfam = df_government.groupby('botfam')['hosts'].sum().nlargest(5)
+top_5_botfam
+```
+2023-07-30 21:32:22 [INFO] Answer: botfam
+ConfickerAB    28818
+Necurs         12425
+Sality          7466
+Bedep           6183
+Ramnit          4484
+Name: hosts, dtype: int64
+2023-07-30 21:32:22 [INFO] Executed in: 2.9513771533966064s
+2023-07-30 23:15:25 [INFO] Running PandasAI with openai LLM...
+2023-07-30 23:15:25 [INFO] Prompt ID: 08890cfd-8637-4006-a818-7f1650f81f29
+2023-07-30 23:15:32 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by bot family and calculate the sum of hosts and orgs
+grouped_data = df.groupby('botfam').sum()
+
+# Get the bot families and their corresponding number of hosts and organizations
+bot_families = grouped_data.index
+hosts = grouped_data['hosts']
+orgs = grouped_data['orgs']
+
+# Set the width of the bars
+bar_width = 0.35
+
+# Set the position of the bars on the x-axis
+r1 = np.arange(len(bot_families))
+r2 = [x + bar_width for x in r1]
+
+# Create the grouped bar chart
+plt.bar(r1, hosts, color='b', width=bar_width, label='Hosts')
+plt.bar(r2, orgs, color='g', width=bar_width, label='Organizations')
+
+# Add labels, title, and legend
+plt.xlabel('Bot Family')
+plt.ylabel('Count')
+plt.title('Number of Hosts and Organizations by Bot Family')
+plt.xticks([r + bar_width/2 for r in range(len(bot_families))], bot_families)
+plt.legend()
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-07-30 23:15:32 [INFO] 
+Code running:
+```
+grouped_data = df.groupby('botfam').sum()
+bot_families = grouped_data.index
+hosts = grouped_data['hosts']
+orgs = grouped_data['orgs']
+bar_width = 0.35
+r1 = np.arange(len(bot_families))
+r2 = [(x + bar_width) for x in r1]
+plt.bar(r1, hosts, color='b', width=bar_width, label='Hosts')
+plt.bar(r2, orgs, color='g', width=bar_width, label='Organizations')
+plt.xlabel('Bot Family')
+plt.ylabel('Count')
+plt.title('Number of Hosts and Organizations by Bot Family')
+plt.xticks([(r + bar_width / 2) for r in range(len(bot_families))],
+    bot_families)
+plt.legend()
+plt.show()
+plt.close('all')
+```
+2023-07-30 23:16:00 [INFO] Answer: None
+2023-07-30 23:16:00 [INFO] Executed in: 34.78187012672424s
+2023-07-30 23:16:49 [INFO] Running PandasAI with openai LLM...
+2023-07-30 23:16:49 [INFO] Prompt ID: b5ae4304-48f8-4613-8321-b32b24625a2e
+2023-07-30 23:16:53 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by bot family and calculate the sum of hosts and orgs
+grouped_data = df.groupby('botfam').sum()
+
+# Create a bar chart
+fig, ax = plt.subplots()
+grouped_data[['hosts', 'orgs']].plot(kind='bar', ax=ax)
+
+# Set the labels and title
+ax.set_xlabel('Bot Family')
+ax.set_ylabel('Count')
+ax.set_title('Number of Hosts and Organizations by Bot Family')
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-07-30 23:16:53 [INFO] 
+Code running:
+```
+grouped_data = df.groupby('botfam').sum()
+fig, ax = plt.subplots()
+grouped_data[['hosts', 'orgs']].plot(kind='bar', ax=ax)
+ax.set_xlabel('Bot Family')
+ax.set_ylabel('Count')
+ax.set_title('Number of Hosts and Organizations by Bot Family')
+plt.show()
+plt.close('all')
+```
+2023-07-30 23:17:09 [INFO] Answer: None
+2023-07-30 23:17:09 [INFO] Executed in: 19.451348781585693s
+2023-07-30 23:20:23 [INFO] Running PandasAI with openai LLM...
+2023-07-30 23:20:23 [INFO] Prompt ID: ed536379-706b-4763-bbe8-198175a03ae0
+2023-07-30 23:20:26 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by bot family and calculate the sum of hosts and orgs
+grouped_data = df.groupby('botfam').sum()
+
+# Create a bar chart
+fig, ax = plt.subplots()
+grouped_data[['hosts', 'orgs']].plot(kind='bar', ax=ax)
+
+# Set the labels and title
+ax.set_xlabel('Bot Family')
+ax.set_ylabel('Count')
+ax.set_title('Number of Hosts and Organizations by Bot Family')
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-07-30 23:20:26 [INFO] 
+Code running:
+```
+grouped_data = df.groupby('botfam').sum()
+fig, ax = plt.subplots()
+grouped_data[['hosts', 'orgs']].plot(kind='bar', ax=ax)
+ax.set_xlabel('Bot Family')
+ax.set_ylabel('Count')
+ax.set_title('Number of Hosts and Organizations by Bot Family')
+plt.show()
+plt.close('all')
+```
+2023-07-30 23:20:39 [INFO] Answer: None
+2023-07-30 23:20:39 [INFO] Executed in: 16.77487802505493s
+2023-07-30 23:23:00 [INFO] Running PandasAI with openai LLM...
+2023-07-30 23:23:00 [INFO] Prompt ID: cb618ce8-1579-4477-880c-4a3d78f1b8ba
+2023-07-30 23:23:04 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by bot family and calculate the sum of hosts and orgs
+grouped_data = df.groupby('botfam').sum()
+
+# Create a bar chart
+fig, ax = plt.subplots()
+grouped_data[['hosts', 'orgs']].plot(kind='bar', ax=ax)
+
+# Set the labels and title
+ax.set_xlabel('Bot Family')
+ax.set_ylabel('Count')
+ax.set_title('Number of Hosts and Organizations by Bot Family')
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-07-30 23:23:04 [INFO] 
+Code running:
+```
+grouped_data = df.groupby('botfam').sum()
+fig, ax = plt.subplots()
+grouped_data[['hosts', 'orgs']].plot(kind='bar', ax=ax)
+ax.set_xlabel('Bot Family')
+ax.set_ylabel('Count')
+ax.set_title('Number of Hosts and Organizations by Bot Family')
+plt.show()
+plt.close('all')
+```
+2023-07-30 23:23:18 [INFO] Answer: None
+2023-07-30 23:23:18 [INFO] Executed in: 18.777949810028076s
+2023-07-30 23:24:51 [INFO] Running PandasAI with openai LLM...
+2023-07-30 23:24:51 [INFO] Prompt ID: fb987f4a-d167-47d2-87fd-9ac07046faf4
+2023-07-30 23:24:55 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the dataframe by botfam and calculate the sum of hosts for each botfam
+hosts_by_botfam = df.groupby('botfam')['hosts'].sum()
+
+# Create a bar chart
+plt.bar(hosts_by_botfam.index, hosts_by_botfam.values)
+plt.xlabel('Bot Family')
+plt.ylabel('Number of Hosts')
+plt.title('Number of Hosts by Bot Family')
+plt.xticks(rotation=45)
+plt.show()
+                        ```
+                    
+2023-07-30 23:24:55 [INFO] 
+Code running:
+```
+hosts_by_botfam = df.groupby('botfam')['hosts'].sum()
+plt.bar(hosts_by_botfam.index, hosts_by_botfam.values)
+plt.xlabel('Bot Family')
+plt.ylabel('Number of Hosts')
+plt.title('Number of Hosts by Bot Family')
+plt.xticks(rotation=45)
+plt.show()
+plt.close('all')
+```
+2023-07-30 23:24:55 [INFO] Answer: None
+2023-07-30 23:24:55 [INFO] Executed in: 4.320446968078613s
+2023-07-30 23:26:53 [INFO] Running PandasAI with openai LLM...
+2023-07-30 23:26:53 [INFO] Prompt ID: ed08beb4-daab-4560-9f8d-99f7f4500529
+2023-07-30 23:26:58 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by botfam and calculate the sum of hosts and orgs
+grouped_data = df.groupby('botfam').sum()
+
+# Create a bar chart
+fig, ax = plt.subplots()
+grouped_data[['hosts', 'orgs']].plot(kind='bar', ax=ax)
+
+# Set the labels and title
+ax.set_xlabel('Bot Family')
+ax.set_ylabel('Count')
+ax.set_title('Number of Hosts and Orgs by Bot Family')
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-07-30 23:26:58 [INFO] 
+Code running:
+```
+grouped_data = df.groupby('botfam').sum()
+fig, ax = plt.subplots()
+grouped_data[['hosts', 'orgs']].plot(kind='bar', ax=ax)
+ax.set_xlabel('Bot Family')
+ax.set_ylabel('Count')
+ax.set_title('Number of Hosts and Orgs by Bot Family')
+plt.show()
+plt.close('all')
+```
+2023-07-30 23:27:12 [INFO] Answer: None
+2023-07-30 23:27:12 [INFO] Executed in: 18.093765020370483s
+2023-07-30 23:27:57 [INFO] Running PandasAI with openai LLM...
+2023-07-30 23:27:57 [INFO] Prompt ID: 8f13f056-50b5-49a5-8948-1204faa7b6a9
+2023-07-30 23:28:04 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the dataframe by botfam and calculate the sum of hosts for each botfam
+hosts_by_botfam = df.groupby('botfam')['hosts'].sum()
+
+# Create a bar chart of hosts by botfam
+plt.figure(figsize=(10, 6))
+hosts_by_botfam.plot(kind='bar')
+plt.title('Hosts by Botfam')
+plt.xlabel('Botfam')
+plt.ylabel('Hosts')
+plt.show()
+
+# Group the dataframe by botfam and calculate the sum of orgs for each botfam
+orgs_by_botfam = df.groupby('botfam')['orgs'].sum()
+
+# Create a bar chart of orgs by botfam
+plt.figure(figsize=(10, 6))
+orgs_by_botfam.plot(kind='bar')
+plt.title('Orgs by Botfam')
+plt.xlabel('Botfam')
+plt.ylabel('Orgs')
+plt.show()
+                        ```
+                    
+2023-07-30 23:28:04 [INFO] 
+Code running:
+```
+hosts_by_botfam = df.groupby('botfam')['hosts'].sum()
+plt.figure(figsize=(10, 6))
+hosts_by_botfam.plot(kind='bar')
+plt.title('Hosts by Botfam')
+plt.xlabel('Botfam')
+plt.ylabel('Hosts')
+plt.show()
+plt.close('all')
+orgs_by_botfam = df.groupby('botfam')['orgs'].sum()
+plt.figure(figsize=(10, 6))
+orgs_by_botfam.plot(kind='bar')
+plt.title('Orgs by Botfam')
+plt.xlabel('Botfam')
+plt.ylabel('Orgs')
+plt.show()
+plt.close('all')
+```
+2023-07-30 23:28:04 [INFO] Answer: None
+2023-07-30 23:28:04 [INFO] Executed in: 7.584106683731079s
+2023-07-30 23:28:30 [INFO] Running PandasAI with openai LLM...
+2023-07-30 23:28:30 [INFO] Prompt ID: 417b945e-1c58-47e2-95af-5c7ecb6487fa
+2023-07-30 23:28:36 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the dataframe by botfam and calculate the sum of hosts and orgs
+grouped_df = df.groupby('botfam').sum()
+
+# Create a bar chart of hosts by botfam
+plt.subplot(1, 2, 1)
+grouped_df['hosts'].plot(kind='bar')
+plt.title('Hosts by Botfam')
+plt.xlabel('Botfam')
+plt.ylabel('Hosts')
+
+# Create a bar chart of orgs by botfam
+plt.subplot(1, 2, 2)
+grouped_df['orgs'].plot(kind='bar')
+plt.title('Orgs by Botfam')
+plt.xlabel('Botfam')
+plt.ylabel('Orgs')
+
+# Adjust the layout to avoid overlapping
+plt.tight_layout()
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-07-30 23:28:36 [INFO] 
+Code running:
+```
+grouped_df = df.groupby('botfam').sum()
+plt.subplot(1, 2, 1)
+grouped_df['hosts'].plot(kind='bar')
+plt.title('Hosts by Botfam')
+plt.xlabel('Botfam')
+plt.ylabel('Hosts')
+plt.subplot(1, 2, 2)
+grouped_df['orgs'].plot(kind='bar')
+plt.title('Orgs by Botfam')
+plt.xlabel('Botfam')
+plt.ylabel('Orgs')
+plt.tight_layout()
+plt.show()
+plt.close('all')
+```
+2023-07-30 23:28:54 [INFO] Answer: None
+2023-07-30 23:28:54 [INFO] Executed in: 24.607798099517822s
+2023-07-30 23:32:22 [INFO] Running PandasAI with openai LLM...
+2023-07-30 23:32:22 [INFO] Prompt ID: db39057c-f8da-4c5a-b06e-135c65d7489d
+2023-07-30 23:32:27 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the dataframe by botfam and calculate the sum of hosts and orgs for each botfam
+grouped_df = df.groupby('botfam').sum()
+
+# Create a bar chart of hosts by botfam
+plt.figure(figsize=(10, 6))
+plt.bar(grouped_df.index, grouped_df['hosts'])
+plt.xlabel('Bot Family')
+plt.ylabel('Number of Hosts')
+plt.title('Number of Hosts by Bot Family')
+
+# Create a second bar chart of orgs by botfam in the same axis
+plt.bar(grouped_df.index, grouped_df['orgs'], alpha=0.5)
+plt.legend(['Hosts', 'Orgs'])
+
+plt.show()
+                        ```
+                    
+2023-07-30 23:32:27 [INFO] 
+Code running:
+```
+grouped_df = df.groupby('botfam').sum()
+plt.figure(figsize=(10, 6))
+plt.bar(grouped_df.index, grouped_df['hosts'])
+plt.xlabel('Bot Family')
+plt.ylabel('Number of Hosts')
+plt.title('Number of Hosts by Bot Family')
+plt.bar(grouped_df.index, grouped_df['orgs'], alpha=0.5)
+plt.legend(['Hosts', 'Orgs'])
+plt.show()
+plt.close('all')
+```
+2023-07-30 23:32:43 [INFO] Answer: None
+2023-07-30 23:32:43 [INFO] Executed in: 21.37675404548645s
+2023-07-30 23:35:27 [INFO] Running PandasAI with openai LLM...
+2023-07-30 23:35:27 [INFO] Prompt ID: 9a0a183e-bed0-4906-99c6-53dcb3d07153
+2023-07-30 23:35:33 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the dataframe by botfam and calculate the sum of hosts and orgs
+grouped_df = df.groupby('botfam').sum()
+
+# Create a bar chart comparing the number of hosts and orgs for each botfam
+fig, ax = plt.subplots()
+x = range(len(grouped_df))
+width = 0.35
+
+ax.bar(x, grouped_df['hosts'], width, label='Hosts')
+ax.bar([i + width for i in x], grouped_df['orgs'], width, label='Orgs')
+
+ax.set_xticks([i + width/2 for i in x])
+ax.set_xticklabels(grouped_df.index)
+
+ax.set_xlabel('Botfam')
+ax.set_ylabel('Count')
+ax.set_title('Number of Hosts and Orgs by Botfam')
+
+ax.legend()
+
+plt.show()
+                        ```
+                    
+2023-07-30 23:35:33 [INFO] 
+Code running:
+```
+grouped_df = df.groupby('botfam').sum()
+fig, ax = plt.subplots()
+x = range(len(grouped_df))
+width = 0.35
+ax.bar(x, grouped_df['hosts'], width, label='Hosts')
+ax.bar([(i + width) for i in x], grouped_df['orgs'], width, label='Orgs')
+ax.set_xticks([(i + width / 2) for i in x])
+ax.set_xticklabels(grouped_df.index)
+ax.set_xlabel('Botfam')
+ax.set_ylabel('Count')
+ax.set_title('Number of Hosts and Orgs by Botfam')
+ax.legend()
+plt.show()
+plt.close('all')
+```
+2023-07-30 23:35:33 [INFO] Answer: None
+2023-07-30 23:35:33 [INFO] Executed in: 6.04011607170105s
+2023-07-30 23:39:03 [INFO] Running PandasAI with openai LLM...
+2023-07-30 23:39:03 [INFO] Prompt ID: b0c8e50e-0d65-457c-9651-509c23bb0c7a
+2023-07-30 23:39:03 [INFO] Using cached response
+2023-07-30 23:39:03 [INFO] 
+Code running:
+```
+df_features = df.copy()
+df_features['domain_length'] = df_features['domain'].apply(len)
+df_features['num_digits'] = df_features['domain'].apply(lambda x: sum(c.
+    isdigit() for c in x))
+df_features['num_special_chars'] = df_features['domain'].apply(lambda x:
+    sum(not c.isalnum() for c in x))
+df_features
+```
+2023-07-30 23:39:03 [INFO] Answer:       isDGA                      domain  ... num_digits num_special_chars
+0       dga               tyopcrkqgxcfm  ...          0                 0
+1       dga  72j5rn1l9mzleo6203v1ogenfl  ...         10                 0
+2       dga                    thenrest  ...          0                 0
+3       dga  15ihbm71utcnfa8dk1mmgoobl9  ...          7                 0
+4       dga    x1d6ou7e7kofk60ayhq74x7e  ...          9                 0
+...     ...                         ...  ...        ...               ...
+1995  legit                        88ha  ...          2                 0
+1996  legit                      grooby  ...          0                 0
+1997  legit                       51zzl  ...          2                 0
+1998  legit             index-education  ...          0                 1
+1999  legit                    fastpics  ...          0                 0
+
+[2000 rows x 7 columns]
+2023-07-30 23:39:03 [INFO] Executed in: 0.020548105239868164s
+2023-07-30 23:39:11 [INFO] Running PandasAI with openai LLM...
+2023-07-30 23:39:11 [INFO] Prompt ID: e77989d0-af8f-4384-be8d-7c25238ad40a
+2023-07-30 23:39:11 [INFO] Using cached response
+2023-07-30 23:39:11 [INFO] 
+Code running:
+```
+df_features = df.copy()
+df_features['domain_length'] = df_features['domain'].apply(len)
+df_features['num_digits'] = df_features['domain'].apply(lambda x: sum(c.
+    isdigit() for c in x))
+df_features['num_special_chars'] = df_features['domain'].apply(lambda x:
+    sum(not c.isalnum() for c in x))
+df_features
+```
+2023-07-30 23:39:11 [INFO] Answer:       isDGA                      domain  ... num_digits num_special_chars
+0       dga               tyopcrkqgxcfm  ...          0                 0
+1       dga  72j5rn1l9mzleo6203v1ogenfl  ...         10                 0
+2       dga                    thenrest  ...          0                 0
+3       dga  15ihbm71utcnfa8dk1mmgoobl9  ...          7                 0
+4       dga    x1d6ou7e7kofk60ayhq74x7e  ...          9                 0
+...     ...                         ...  ...        ...               ...
+1995  legit                        88ha  ...          2                 0
+1996  legit                      grooby  ...          0                 0
+1997  legit                       51zzl  ...          2                 0
+1998  legit             index-education  ...          0                 1
+1999  legit                    fastpics  ...          0                 0
+
+[2000 rows x 7 columns]
+2023-07-30 23:39:11 [INFO] Executed in: 0.021112918853759766s
