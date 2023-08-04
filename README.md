@@ -7,6 +7,8 @@ GTK Cyber [www.gtkcyber.com](https://www.gtkcyber.com) was founded to bridge the
 only provide high standard hands-on trainings, but introduce students to the most cutting-edge technologies and advancements in artificial intelligence,
 all with a focus on direct applicability to cyber security.
 
+
+
 ### Centaur Data Science Virtual Machine
 
 In order to have the best student experience, we strongly encourage you to download the Centaur VM here: [https://github.com/gtkcyber/centaur](https://github.com/gtkcyber/centaur).
@@ -102,6 +104,7 @@ Notebooks/Scripts/Exercises and Data
     
 ## [bonus](./bonus)
 
+   - Module 0.5 [Overview of Regular Expressions.pdf](./bonus/Module%200.5%20Overview%20of%20Regular%20Expressions.pdf)
    - Worksheet 0.1 - [Regular Expressions in Python.ipynb](./notebooks/Worksheet%200.1%20%20Regular%20Expressions%20in%20Python.ipynb)
    - Worksheet 0.1  Regular Expressions in Python - Answers.ipynb
    - Worksheet 8.0 - Zeppelin - PySpark Malicious URL ML Classification - Answers.json ```(open Zeppelin notebook and import JSON to view)```
