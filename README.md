@@ -33,7 +33,7 @@ Centaur is a environment for data science. Centaur is based on Ubuntu MATE and i
 - Hacking Machine Learning Models
 
 
-GitHub Structure
+#### GitHub Structure
 
 - answers (answers notebooks/solutions to all exercises and more)
 - data (all data files)
@@ -41,7 +41,7 @@ GitHub Structure
 - notebooks (all exercises)
 - slides (all slides as pdf)
 
-Development Environment
+### Development Environment
 
 
 **Starting Jupyter notebook**: Go to Applications > Programming > Jupyter Notebook or hit the Nb icon located at the top menu bar. Navigate through your file system and open files with .ipynb extension.
@@ -62,51 +62,54 @@ Solutions to all challenges are within the ```answers``` folder (also contains a
 
 Notebooks/Scripts/Exercises and Data
 
-- **notebooks/**
-    - Worksheet 0.1 - [Regular Expressions in Python.ipynb](./notebooks/Worksheet%200.1%20%20Regular%20Expressions%20in%20Python.ipynb)
-    - Worksheet 1.1 - Working with One Dimensional Data.ipynb
-    - Worksheet 1.2 - Exploring One Dimensional Data.ipynb
-    - Worksheet 2.1 - Working with Two Dimensional Data.ipynb
-    - Worksheet 2.2 - Exploratory Data Analysis.ipynb
-    - Worksheet 3 - Data Visualization.ipynb
-    - Worksheet 4 - Feature Engineering.ipynb
-    - Worksheet 5.2 - DGA detection using supervised learning
-    - Worksheet 5.3 - Tuning your Classifier.ipynb
-    - Worksheet 5.4 - Automate it All!.ipynb
-    - Worksheet 6.0 - Clustering.ipynb
-    - Worksheet 7 - Anomaly Detection.ipynb
-    - Worksheet 8 - Hunting with Data Science.ipynb
-    - Worksheet 9 - 
-    - Worksheet 10.1 – Using AI for Anomaly Detection.ipynb
-    - Worksheet 10.2 - Exploratory Data Analysis with AI.ipynb
+### [notebooks](./notebooks)
+    
+- Worksheet 1.1 - Working with One Dimensional Data.ipynb
+- Worksheet 1.2 - Exploring One Dimensional Data.ipynb
+- Worksheet 2.1 - Working with Two Dimensional Data.ipynb
+- Worksheet 2.2 - Exploratory Data Analysis.ipynb
+- Worksheet 3.0 - Data Visualization.ipynb
+- Worksheet 4.0 - Feature Engineering.ipynb
+- Worksheet 5.2 - DGA Detection using Supervised Learning.ipynb
+- Worksheet 5.3 - Tuning your Classifier.ipynb
+- Worksheet 5.4 - Automate it All!.ipynb
+- Worksheet 6.0 - Clustering.ipynb
+- Worksheet 7.0 - Anomaly Detection.ipynb
+- Worksheet 8.0 - Hunting with Data Science.ipynb
+- Worksheet 9.0 - Featureless Deep Learning URL.ipynb
+- Worksheet 10.1 - Using AI for Anomaly Detection.ipynb
+- Worksheet 10.2 - Exploratory Data Analysis with AI.ipynb
 
-- **answers/**
+### [answers](./answers)
 
-    - Worksheet 0.1 - Regular Expressions in Python - Answers.ipynb
-    - Worksheet 1.1 - Working with One Dimensional Data - Answers.ipynb
-    - Worksheet 1.2 - Exploring One Dimensional Data - Answers.ipynb
-    - Worksheet 2.1 - Exploring Two Dimensional Data - Answers.ipynb
-    - Worksheet 2.2 - Exploratory Data Analysis - Answers.ipynb
-    - Worksheet 4 - Data Visualization - Answers.ipynb
-    - Worksheet 5.1 - Feature Engineering - Answers.ipynb
-    - Worksheet 5.2 - Malicious URL Classification - Answers.ipynb
-    - Worksheet 5.3 - Tuning your Classifier - Answers.ipynb
-    - Worksheet 5.4 - Automate it All! - Answers.ipynb
-    - Worksheet 6.0 - Clustering - Answers.ipynb
-    - Worksheet 7 - Anomaly Detection - Answers.ipynb
-    - Worksheet 11 - Hunting with Data Science - Answers.ipynb
+- Worksheet 1.1 - Working with One Dimensional Data - Answers.ipynb
+- Worksheet 1.2 - Exploring One Dimensional Data - Answers.ipynb
+- Worksheet 2.1 - Exploring Two Dimensional Data - Answers.ipynb
+- Worksheet 2.2 - Exploratory Data Analysis - Answers.ipynb
+- Worksheet 3.0 - Data Visualization - Answers.ipynb
+- Worksheet 4.0 - Feature Engineering - Answers.ipynb
+- Worksheet 5.2 - DGA Detection using Supervised Learning - Answers.ipynb
+- Worksheet 5.3 - Tuning your Classifier - Answers.ipynb
+- Worksheet 5.4 - Automate it All! - Answers.ipynb
+- Worksheet 6.0 - Clustering - Answers.ipynb
+- Worksheet 7.0 - Anomaly Detection - Answers.ipynb
+- Worksheet 8.0 - Hunting with Data Science - Answers.ipynb
+- Worksheet 9.0 - Featureless Deep Learning URL - Answers.ipynb
+- Worksheet 10.1 - Using GPT for Anomaly Detection - Answers.ipynb
+- Worksheet 10.2 - Exploratory Data Analysis with AI - Answers.ipynb
 
     
     
-    BONUS notebooks:
-    
-    - Worksheet 08 - Zeppelin - PySpark Malicious URL ML Classification - Answers.json ```(open Zeppelin notebook and import JSON to view)```
-    - Worksheet 09 - Featureless Deep Learning URL - Answers.ipynb
-    - Worksheet 11 - Zeppelin Part1 - PySpark + ELK + Kafka - Answers.json ```(open Zeppelin notebook and import JSON to view)```
-    - Worksheet 11 - Zeppelin Part2 - PySpark + ELK + Kafka -Answers.json ```(open Zeppelin notebook and import JSON to view)```
-    - main_pyspark_streaming_apachelogs_kafka.py (complementing Worksheet 11 - Zeppelin Part2)
+## [bonus](./bonus)
 
-- recommended readings
+   - Worksheet 0.1 - [Regular Expressions in Python.ipynb](./notebooks/Worksheet%200.1%20%20Regular%20Expressions%20in%20Python.ipynb)
+   - Worksheet 0.1  Regular Expressions in Python - Answers.ipynb
+   - Worksheet 8.0 - Zeppelin - PySpark Malicious URL ML Classification - Answers.json ```(open Zeppelin notebook and import JSON to view)```
+   - Worksheet 9.0 - Featureless Deep Learning URL - Answers.ipynb
+   - Worksheet 11.0 - Zeppelin Part1 - PySpark + ELK + Kafka - Answers.json ```(open Zeppelin notebook and import JSON to view)```
+   - Worksheet 11.0 - Zeppelin Part2 - PySpark + ELK + Kafka -Answers.json ```(open Zeppelin notebook and import JSON to view)```
+
+### Recommended Readings
 
     - [Python for Data Analysis](http://shop.oreilly.com/product/0636920023784.do)
     - [Data Science for Business](http://shop.oreilly.com/product/0636920028918.do)
@@ -117,7 +120,7 @@ Notebooks/Scripts/Exercises and Data
     - [Learning Apache Drill](https://amzn.to/2M8Peo6)
     - [Deep Learning](http://www.deeplearningbook.org/)
     
-- **data/**
+### [data](./data)
 
     - access
     - apache-access.log
