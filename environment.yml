@@ -13,8 +13,6 @@ dependencies:
   - scikit-learn
   - scipy
   - statsmodels
-  - tensorflow
-  - keras
   - pip
   
   
