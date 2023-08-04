@@ -111,55 +111,85 @@ Notebooks/Scripts/Exercises and Data
 
 ### Recommended Readings
 
-    - [Python for Data Analysis](http://shop.oreilly.com/product/0636920023784.do)
-    - [Data Science for Business](http://shop.oreilly.com/product/0636920028918.do)
-    - [Creating a Data-Driven Organization](http://shop.oreilly.com/product/0636920035848.do)
-    - [Data-Driven Security](http://datadrivensecurity.info/)
-    - [Mastering Machine Learning with scikit-learn](https://www.packtpub.com/big-data-and-business-intelligence/mastering-machine-learning-scikit-learn)
-    - [Hands-On Machine Learning with Scikit-Learn and TensorFlow](http://shop.oreilly.com/product/0636920052289.do)
-    - [Learning Apache Drill](https://amzn.to/2M8Peo6)
-    - [Deep Learning](http://www.deeplearningbook.org/)
+   - [Python for Data Analysis](http://shop.oreilly.com/product/0636920023784.do)
+   - [Data Science for Business](http://shop.oreilly.com/product/0636920028918.do)
+   - [Creating a Data-Driven Organization](http://shop.oreilly.com/product/0636920035848.do)
+   - [Data-Driven Security](http://datadrivensecurity.info/)
+   - [Mastering Machine Learning with scikit-learn](https://www.packtpub.com/big-data-and-business-intelligence/mastering-machine-learning-scikit-learn)
+   - [Hands-On Machine Learning with Scikit-Learn and TensorFlow](http://shop.oreilly.com/product/0636920052289.do)
+   - [Learning Apache Drill](https://amzn.to/2M8Peo6)
+   - [Deep Learning](http://www.deeplearningbook.org/)
     
 ### [data](./data)
 
-    - access
-    - apache-access.log
-    - CountVectorizer_domains.pickle (pickled ML Feature Engineering models)
-    - CountVectorizer_paths.pickle
-    - CountVectorizer_tlds.pickle
-    - dailybots.csv
-    - data1.json
-    - data2.json
-    - data3.json
-    - data4.json
-    - deeplearning_1DConv.h5 (saved Deep Learning URL Classification keras models)
-    - deeplearning_1DConv.json
-    - deeplearning_1DConvLSTM.h5
-    - deeplearning_1DConvLSTM.json
-    - deeplearning_LSTM.h5
-    - deeplearning_LSTM.json
-    - dga_data_full.csv (extra Domain Generation Algorithms data set)
-    - dga_data_small.csv
-    - dns_messages.log
-    - domains_created_db.csv (database of whois creation time for unique domains)
-    - eve.json (nested json file)
-    - eve_small.json
-    - feature_names.pickle (pickled ML Feature Engineering column names)
-    - hackers-access.httpd
-    - http.pcap
-    - http-pcap.json
-    - large_eve_json.zip
-    - maccdc2012_00000.csv.gz (pcap for pyspark)
-    - maccdc2012_00000.pcap.gz
-    - maccdc2012_00000_small.csv.gz
-    - maccdc2012_00000_small.csv
-    - maccdc2012_00000_small.pcap.gz
-    - mysql.log
-    - snort
-    - telnet-cooked.pcap
-    - url_data_full.csv (raw Machine Learning URL Classification data set)
-    - url_data_medium.csv
-    - url_data_mega_deep_learning.csv (more raw URLs for Deep Learning without whois info)
-    - url_data_small.csv
-    - url_features_final_df.csv (clean feature matrix Machine Learning URL Classification)
-    - url_features_final_df_spark.csv (for Spark version no periods in column names)
+- logs/
+- access
+- attack-trace.pcap
+- baltimore_salaries_2015.csv
+- baltimore_salaries_2015.csvh
+- baltimore_salaries_2015.json
+- baltimore_salaries_2016.csv
+- baltimore_salaries_2016.csvh
+- baltimore_salaries_2016.json
+- columns.json
+- CountVectorizer_domains.pickle
+- CountVectorizer_paths.pickle
+- CountVectorizer_tlds.pickle
+- cpu-full-a.csv
+- cpu-full-b.csv
+- cpu-test-a.csv
+- cpu-test-b.csv
+- cpu-train-a.csv
+- cpu-train-b.csv
+- customer_data.csv
+- customers.json
+- d_common_en_words.pickle
+- dailybots.csv
+- dailybots.csvh
+- data1.json
+- data2.json
+- data3.json
+- data4.json
+- dates.csv
+- dates.csvh
+- deeplearning_1DConv.h5
+- deeplearning_1DConv.json
+- deeplearning_1DConvLSTM.h5
+- deeplearning_LSTM.h5
+- deeplearning_LSTM.json
+- dga_data_full.csv
+- dga_data_small.csv
+- dga_features_final_df.csv
+- dga-full.csv
+- domains_created_db.csv
+- elonmusk_tweets.csv
+- eve_small.json
+- eve.json
+- FAOSTAT_data_6-25-2019.csv
+- feature_names.pickle
+- firewall.ssdlog
+- firewall1.ssdlog
+- google-10000-english.txt
+- hackers-access.httpd
+- http-pcap.json
+- http.pcap
+- index.json
+- maccdc2012_00000_small.csv
+- maccdc2012_00000_small.csv.gz
+- maccdc2012_00000_small.pcap.gz
+- our_data_dga_features_final_df.csv
+- people.csv
+- people.csvh
+- records.json
+- small-server-log.httpd
+- split.json
+- telnet-cooked.pcap
+- twitter1-small.csv
+- url_data_full.csv
+- url_data_medium.csv
+- url_data_mega_deep_learning.csv
+- url_data_small.csv
+- urls.txt
+- user-agents.csv
+- values.json
+- visualization_data.csv
