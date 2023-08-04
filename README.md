@@ -7,26 +7,23 @@ GTK Cyber [www.gtkcyber.com](https://www.gtkcyber.com) was founded to bridge the
 only provide high standard hands-on trainings, but introduce students to the most cutting-edge technologies and advancements in artificial intelligence,
 all with a focus on direct applicability to cyber security.
 
-### GRIFFON Data Science Virtual Machine
+### Centaur Data Science Virtual Machine
 
-In order to have the best student experience, we strongly encourage you to download the Griffon VM here: https://github.com/gtkcyber/griffon-vm.
-Griffon is a environment for data science. Griffon is based on Ubuntu MATE and includes numerous data science tools, all installed and configured for immediate use.
+In order to have the best student experience, we strongly encourage you to download the Centaur VM here: [https://github.com/gtkcyber/centaur](https://github.com/gtkcyber/centaur).
+Centaur is a environment for data science. Centaur is based on Ubuntu MATE and includes numerous data science tools, all installed and configured for immediate use.
 
-<img src="img/griffon-v1.png" width="300">
 
 ### Instructors
 
 - Charles Givre - Data Scientist:  charles.givre@gtkcyber.com
-- Curtis Lambert - Senior Instuctor: curtis@gtkcyber.com
+- Summer Rankin - Instuctor & Data Scientist: summer@gtkcyber.com
 
 ### Lectures:
 
 <a href="slides/">/Slides</a>
 - Introduction
-- Overview of Regular Expressions
 - Exploratory Data Analysis in 1 Dimension
 - Exploratory Data Analysis in 2 Dimensions
-- Drilling Data
 - Data Visualization
 - Machine Learning (Feature Engineering)
 - Machine Learning (Supervised)
@@ -66,20 +63,22 @@ Solutions to all challenges are within the ```answers``` folder (also contains a
 Notebooks/Scripts/Exercises and Data
 
 - **notebooks/**
-    - Worksheet 0.1 - Regular Expressions in Python.ipynb
+    - Worksheet 0.1 - [Regular Expressions in Python.ipynb](./notebooks/Worksheet%200.1%20%20Regular%20Expressions%20in%20Python.ipynb)
     - Worksheet 1.1 - Working with One Dimensional Data.ipynb
     - Worksheet 1.2 - Exploring One Dimensional Data.ipynb
     - Worksheet 2.1 - Working with Two Dimensional Data.ipynb
     - Worksheet 2.2 - Exploratory Data Analysis.ipynb
-    - Worksheet 3 - Working with Drill.ipynb
-    - Worksheet 4 - Data Visualization.ipynb
-    - Worksheet 5.1 - Feature Engineering.ipynb
-    - Worksheet 5.2 - Malicious URL Classification .ipynb
+    - Worksheet 3 - Data Visualization.ipynb
+    - Worksheet 4 - Feature Engineering.ipynb
+    - Worksheet 5.2 - DGA detection using supervised learning
     - Worksheet 5.3 - Tuning your Classifier.ipynb
     - Worksheet 5.4 - Automate it All!.ipynb
     - Worksheet 6.0 - Clustering.ipynb
     - Worksheet 7 - Anomaly Detection.ipynb
-    - Worksheet 11 - Hunting with Data Science.ipynb
+    - Worksheet 8 - Hunting with Data Science.ipynb
+    - Worksheet 9 - 
+    - Worksheet 10.1 – Using AI for Anomaly Detection.ipynb
+    - Worksheet 10.2 - Exploratory Data Analysis with AI.ipynb
 
 - **answers/**
 
@@ -88,7 +87,6 @@ Notebooks/Scripts/Exercises and Data
     - Worksheet 1.2 - Exploring One Dimensional Data - Answers.ipynb
     - Worksheet 2.1 - Exploring Two Dimensional Data - Answers.ipynb
     - Worksheet 2.2 - Exploratory Data Analysis - Answers.ipynb
-    - Worksheet 3 - Working with Drill - Answers.ipynb
     - Worksheet 4 - Data Visualization - Answers.ipynb
     - Worksheet 5.1 - Feature Engineering - Answers.ipynb
     - Worksheet 5.2 - Malicious URL Classification - Answers.ipynb
