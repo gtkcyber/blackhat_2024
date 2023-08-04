@@ -2,38 +2,19 @@ name: gtk-blackhat
 channels:
   - defaults
   - conda-forge
-  - bioconda
-  - pyviz
 dependencies:
-  - python=3.8
+  - python=3.11
   - pandas
   - matplotlib
   - seaborn
   - jupyter
-  - xgboost
-  - adversarial-robustness-toolbox
   - openai
-  - user-agents
-  - cufflinks
   - plotly
-  - panel
   - scikit-learn
-  - yellowbrick
-  - six
-  - lime
-  - graphviz
-  - pydotplus
   - scipy
-  - tpot
-  - pmdarima
   - statsmodels
-  - np_utils
   - tensorflow
   - keras
   - pip
-  - pip:
-    - pandasai
-    - apache-log-parser
-    - flare
   
   
