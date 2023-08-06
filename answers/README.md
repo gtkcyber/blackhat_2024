@@ -18,3 +18,4 @@ Notebooks/Solutions to exercises:
 - Worksheet 9.0 - Featureless Deep Learning URL - Answers.ipynb
 - Worksheet 10.1 - Using GPT for Anomaly Detection - Answers.ipynb
 - Worksheet 10.2 - Exploratory Data Analysis with AI - Answers.ipynb
+- Worksheet 11.0 - Attacking AI - Answers.ipynb
