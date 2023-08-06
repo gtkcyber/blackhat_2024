@@ -17,3 +17,4 @@ Notebooks/Exercises:
 - Worksheet 8.0 - Hunting with Data Science.ipynb
 - Worksheet 10.1 - Using AI for Anomaly Detection.ipynb
 - Worksheet 10.2 - Exploratory Data Analysis with AI.ipynb
+- Worksheet 11 - Attacking AI.ipynb

@@ -81,6 +81,7 @@ Notebooks/Scripts/Exercises and Data
 - Worksheet 9.0 - Featureless Deep Learning URL.ipynb
 - Worksheet 10.1 - Using AI for Anomaly Detection.ipynb
 - Worksheet 10.2 - Exploratory Data Analysis with AI.ipynb
+- Worksheet 11.0 - Attacking AI.ipynb
 
 ### [answers](./answers)
 
@@ -99,6 +100,7 @@ Notebooks/Scripts/Exercises and Data
 - Worksheet 9.0 - Featureless Deep Learning URL - Answers.ipynb
 - Worksheet 10.1 - Using GPT for Anomaly Detection - Answers.ipynb
 - Worksheet 10.2 - Exploratory Data Analysis with AI - Answers.ipynb
+- Worksheet 11.0 - Attacking AI - Answers.ipynb
 
     
     
