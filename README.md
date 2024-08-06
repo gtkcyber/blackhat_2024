@@ -72,7 +72,8 @@ Notebooks/Scripts/Exercises and Data
 - Worksheet 2.2 - Exploratory Data Analysis.ipynb
 - Worksheet 3.0 - Data Visualization.ipynb
 - Worksheet 4.0 - Feature Engineering.ipynb
-- Worksheet 5.2 - DGA Detection using Supervised Learning.ipynb
+- Worksheet 5.1 - DGA Detection using Supervised Learning.ipynb
+- Worksheet 5.2 - DGA Making Predictions on New Data.ipynb
 - Worksheet 5.3 - Tuning your Classifier.ipynb
 - Worksheet 5.4 - Automate it All!.ipynb
 - Worksheet 6.0 - Clustering.ipynb
@@ -91,7 +92,8 @@ Notebooks/Scripts/Exercises and Data
 - Worksheet 2.2 - Exploratory Data Analysis - Answers.ipynb
 - Worksheet 3.0 - Data Visualization - Answers.ipynb
 - Worksheet 4.0 - Feature Engineering - Answers.ipynb
-- Worksheet 5.2 - DGA Detection using Supervised Learning - Answers.ipynb
+- Worksheet 5.1 - DGA Detection using Supervised Learning - Answers.ipynb
+- Worksheet 5.2 - DGA Making Predictions on New Data-Answers.ipynb
 - Worksheet 5.3 - Tuning your Classifier - Answers.ipynb
 - Worksheet 5.4 - Automate it All! - Answers.ipynb
 - Worksheet 6.0 - Clustering - Answers.ipynb
